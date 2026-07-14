@@ -27,19 +27,22 @@ data needed to run the service, and we never sell your data.</p>
 <ul>
   <li><strong>Anonymous device identifier</strong> — a random UUID generated on first
       launch. It is not linked to your name, email, or Apple ID.</li>
-  <li><strong>Your skin data</strong> — your skin profile, product experiences,
-      reactions, routines, and wishlist are stored locally on your device. There is
-      no account, and this data is not uploaded to our servers.</li>
+  <li><strong>Your skin data</strong> — your full skin profile, product experiences,
+      reaction notes, routines, and wishlist are stored locally on your device.
+      There is no account and we do not keep a server-side copy. Only the minimum
+      selected fields described below are relayed transiently when you ask for an
+      AI analysis.</li>
   <li><strong>Ingredient lists during analysis</strong> — when you request a fit
       analysis or an ingredient explanation, the product's ingredient list together
       with anonymized signals from your profile (skin type, concerns, and reaction
-      summaries — never your name or contact details) is sent to our AI provider.
-      This data is processed transiently to produce the result and is not used to
-      train AI models.</li>
-  <li><strong>Anonymous usage events</strong> — basic events such as app opens,
-      product views, and routine completions (never the contents of your skin
-      profile or reaction notes), used to understand how the app is used and to
-      improve it.</li>
+      summaries — never your name, contact details, or free-form notes) is relayed
+      through our gateway to an AI provider. Requests are restricted to zero-data-
+      retention providers, processed only to return the result, and not used to
+      train AI models. We do not store prompts or responses on our server.</li>
+  <li><strong>Anonymous usage and purchase events</strong> — app opens,
+      subscription purchase or restore outcomes, subscription state, and the
+      number of product experiences (never the contents of your skin profile or
+      reaction notes), used to operate and improve the app.</li>
   <li><strong>Product catalog</strong> — the app downloads a shared, public catalog
       of products and ingredients from our server. This is a read-only download; no
       personal data is attached to it.</li>
@@ -58,9 +61,11 @@ data needed to run the service, and we never sell your data.</p>
 your payment details.</p>
 
 <h2>Data retention & deletion</h2>
-<p>Usage data is tied to a random device identifier, not to your identity.
-Deleting the app removes the identifier from your device; you may request
-deletion of associated server records via the contact below.</p>
+<p>Usage data is tied to a random device identifier, not to your name, email, or
+Apple ID. Deleting the app removes its local user data. If iOS retains the random
+identifier in Keychain, Invime replaces it with a new identifier on the next
+installation. You may request deletion of associated analytics records via the
+contact below.</p>
 
 <h2>Contact</h2>
 <p>Questions? Email <a href="mailto:haeundae96@gmail.com">haeundae96@gmail.com</a>
