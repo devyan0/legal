@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1>Acta — Privacy Policy</h1>
-<p class="meta">Last updated: August 11, 2026</p>
+<p class="meta">Last updated: August 23, 2026</p>
 
 <h2>Overview</h2>
 <p>Acta is designed to work without an account. We collect the minimum
@@ -32,13 +32,20 @@ data needed to run the service, and we never sell your data.</p>
       records, notes) is stored locally on your device by default. There is no account.
       The limited exceptions are goal-creation processing and feedback diagnostics
       described below.</li>
-  <li><strong>Goal text during plan creation</strong> — when you create a goal, the
-      goal description and your questionnaire answers are sent through our gateway to
-      an AI provider to generate your plan. We request that the provider not collect
-      this content, and we do not use it to train AI models.</li>
+  <li><strong>Goal creation data</strong> — when you create a goal, the goal
+      description and your questionnaire answers are sent through our gateway to an
+      AI provider to generate your plan. Once a generated plan reaches the purchase
+      screen, we also retain a limited analytics record: the initial goal text,
+      questions and answers, generated or edited plan details, action choices, AI
+      model and performance metadata, app version and language, the result of the
+      creation flow, and an app-generated identifier. We use this record to diagnose
+      failures and improve goal planning. We request that the AI provider not collect
+      this content, and neither the provider nor Acta uses it to train AI models.</li>
   <li><strong>Anonymous usage events</strong> — basic events such as app opens,
       completed records, and goal creation (never the text of your goals or notes),
-      used to understand how the app is used and to improve it.</li>
+      used to understand how the app is used and to improve it. The limited goal
+      creation analytics record described above is the only separate analytics path
+      that includes goal or plan content.</li>
   <li><strong>No cross-app tracking</strong> — Acta does not include an advertising
       SDK, request App Tracking Transparency permission, collect Apple's advertising
       identifier (IDFA), or combine app data with data from other companies' apps or
@@ -59,10 +66,11 @@ data needed to run the service, and we never sell your data.</p>
 <p>We use this data to operate Acta, generate plans, understand product usage,
 respond to feedback, investigate bugs, prevent abuse, and manage subscriptions.
 Service providers process data only for those purposes: Cloudflare hosts our
-gateway and feedback database, our AI provider generates plans, Amplitude handles
-usage analytics, RevenueCat manages subscription status, and Apple processes
-purchases. Acta does not provide advertising or cross-app matching identifiers to
-these service providers.</p>
+gateway, feedback database, and goal creation analytics database; our AI provider
+generates plans; Amplitude handles usage analytics; RevenueCat manages subscription
+status; and Apple processes purchases. The app-generated identifier may correlate a
+goal creation record with Acta's own usage events, but Acta does not provide
+advertising or cross-app matching identifiers to these service providers.</p>
 
 <h2>What we don't do</h2>
 <ul>
@@ -80,13 +88,15 @@ these service providers.</p>
 your payment details.</p>
 
 <h2>Data retention &amp; deletion</h2>
-<p>Usage data is tied to an app-generated identifier. Feedback diagnostic snapshots
-(usage summary, recent actions, AI diagnostics, and extensible diagnostic fields)
-are automatically removed from the feedback database after 30 days. The feedback
-message, optional reply email, status, and associated identifiers may be retained as
-needed to respond, resolve the issue, prevent abuse, and meet legal obligations.
-Deleting the app removes locally stored goals, records, and identifiers from your
-device. You may request deletion of associated server records via the contact below.</p>
+<p>Usage data is tied to an app-generated identifier. Goal creation analytics records
+are automatically removed after 365 days, and their usage-limit counters after 30
+days. Feedback diagnostic snapshots (usage summary, recent actions, AI diagnostics,
+and extensible diagnostic fields) are automatically removed from the feedback
+database after 30 days. The feedback message, optional reply email, status, and
+associated identifiers may be retained as needed to respond, resolve the issue,
+prevent abuse, and meet legal obligations. Deleting the app removes locally stored
+goals, records, and identifiers from your device. You may request deletion of
+associated server records via the contact below.</p>
 
 <h2>Contact</h2>
 <p>Questions or deletion requests? Email
