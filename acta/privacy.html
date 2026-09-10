@@ -59,8 +59,15 @@ data needed to run the service, and we never sell your data.</p>
       information above, a summary of feature usage, recent in-app action names and
       times, and up to five recent AI request/response diagnostics. An AI diagnostic
       may include the goal description, questionnaire answers, or generated plan text
-      involved in that request. Acta shows an offline saved state if the message has
-      not yet reached our server.</li>
+      involved in that request. To alert the owner, we send a copy of the feedback
+      message, topic, app version, operating-system version, language, a masked reply
+      email, and whether a photo was attached to the owner's private Slack workspace.
+      We do not send the diagnostic JSON, recent action properties, device or session
+      identifiers, photo file, or full email address to Slack. If the message contains
+      no Korean text, we send only the feedback message through our AI provider to
+      create a Korean translation for that private alert, while requesting that the
+      provider not collect it. Acta shows an offline saved state if the message has not
+      yet reached our server.</li>
 </ul>
 
 <h2>How we use and process data</h2>
@@ -68,8 +75,10 @@ data needed to run the service, and we never sell your data.</p>
 respond to feedback, investigate bugs, prevent abuse, and manage subscriptions.
 Service providers process data only for those purposes: Cloudflare hosts our
 gateway, feedback database, and goal creation analytics database; our AI provider
-generates plans and coaching replies; Amplitude handles usage analytics; RevenueCat manages subscription
-status; and Apple processes purchases. The app-generated identifier may correlate a
+generates plans, coaching replies, and Korean translations of non-Korean feedback;
+Slack delivers limited feedback alerts to the owner's private workspace; Amplitude
+handles usage analytics; RevenueCat manages subscription status; and Apple processes
+purchases. The app-generated identifier may correlate a
 goal creation record with Acta's own usage events, but Acta does not provide
 advertising or cross-app matching identifiers to these service providers.</p>
 
@@ -95,7 +104,9 @@ days. Feedback diagnostic snapshots (usage summary, recent actions, AI diagnosti
 and extensible diagnostic fields) are automatically removed from the feedback
 database after 30 days. The feedback message, optional reply email, status, and
 associated identifiers may be retained as needed to respond, resolve the issue,
-prevent abuse, and meet legal obligations. Deleting the app removes locally stored
+prevent abuse, and meet legal obligations. Limited feedback-alert copies in the
+owner's private Slack workspace are retained only as needed for support and issue
+investigation and are also subject to that workspace's retention settings. Deleting the app removes locally stored
 goals, records, and identifiers from your device. You may request deletion of
 associated server records via the contact below.</p>
 
