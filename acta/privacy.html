@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1>Acta — Privacy Policy</h1>
-<p class="meta">Last updated: August 23, 2026</p>
+<p class="meta">Last updated: September 10, 2026</p>
 
 <h2>Overview</h2>
 <p>Acta is designed to work without an account. We collect the minimum
@@ -30,17 +30,18 @@ data needed to run the service, and we never sell your data.</p>
       not your Apple ID and do not identify you across other companies' apps.</li>
   <li><strong>Your goals and records</strong> — everything you track (goals, daily
       records, notes) is stored locally on your device by default. There is no account.
-      The limited exceptions are goal-creation processing and feedback diagnostics
+      The limited exceptions are goal-creation processing, AI coaching, and feedback diagnostics
       described below.</li>
   <li><strong>Goal creation data</strong> — when you create a goal, the goal
       description and your questionnaire answers are sent through our gateway to an
-      AI provider to generate your plan. Once a generated plan reaches the purchase
-      screen, we also retain a limited analytics record: the initial goal text,
+      AI provider to generate your plan. When you accept a generated plan and either start
+      a free goal or reach the purchase screen, we also retain a limited analytics record: the initial goal text,
       questions and answers, generated or edited plan details, action choices, AI
       model and performance metadata, app version and language, the result of the
       creation flow, and an app-generated identifier. We use this record to diagnose
       failures and improve goal planning. We request that the AI provider not collect
       this content, and neither the provider nor Acta uses it to train AI models.</li>
+  <li><strong>AI goal coaching</strong> — when you send a coaching message or request an AI reflection, plan adjustment, or next-goal brief, we send the context needed for that request through our gateway to the AI provider. This includes the goal, a limited recent conversation, and selected records. Free conversations use up to seven days of records without journal text. Pro tools may use up to 56 days of records with short note excerpts, closing notes, and summaries of up to three prior goals. Full conversations and closing notes remain stored on your device; Acta does not store these request or reply contents in its gateway database. We store only hashed installation identifiers, random request identifiers, status, and timestamps for weekly usage limits and abuse prevention. These rows expire after 21 days and are removed by our daily scheduled cleanup or the next coaching request. Coaching content is excluded from automatic AI diagnostic attachments in feedback. If you choose to use an AI-prepared brief to create a new goal, that reviewed text becomes goal-creation data under the policy above.</li>
   <li><strong>Anonymous usage events</strong> — basic events such as app opens,
       completed records, and goal creation (never the text of your goals or notes),
       used to understand how the app is used and to improve it. The limited goal
@@ -67,7 +68,7 @@ data needed to run the service, and we never sell your data.</p>
 respond to feedback, investigate bugs, prevent abuse, and manage subscriptions.
 Service providers process data only for those purposes: Cloudflare hosts our
 gateway, feedback database, and goal creation analytics database; our AI provider
-generates plans; Amplitude handles usage analytics; RevenueCat manages subscription
+generates plans and coaching replies; Amplitude handles usage analytics; RevenueCat manages subscription
 status; and Apple processes purchases. The app-generated identifier may correlate a
 goal creation record with Acta's own usage events, but Acta does not provide
 advertising or cross-app matching identifiers to these service providers.</p>
