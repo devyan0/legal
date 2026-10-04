@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Callove — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 680px;
+         margin: 0 auto; padding: 48px 24px; line-height: 1.7;
+         color: #1c1c1e; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #f2f2f7; background: #121016; } }
+  h1 { font-size: 28px; } h2 { font-size: 19px; margin-top: 36px; }
+  h3 { font-size: 16px; margin-top: 24px; }
+  .meta { color: #888; font-size: 14px; }
+  a { color: #7c5cff; }
+</style>
+</head>
+<body>
+<h1>Callove — Privacy Policy</h1>
+<p class="meta">Effective: October 4, 2026 · <a href="privacy.html">한국어(정본)</a></p>
+<h2>Overview</h2>
+<p>Callove is an AI character conversation app operated by 양승현, trading as 히은, in the Republic of Korea. The characters, replies, diaries and images are fictional AI-generated content. This policy describes the first release's implemented data handling.</p>
+<h2>Data we collect and why</h2>
+<ul>
+<li><strong>Account:</strong> Sign in with Apple supplies an account identifier, which we map to a Callove user ID. We use session credentials to keep you signed in. We do not store the Apple email address in the Callove user profile. An encrypted Apple refresh credential may be retained to revoke the Apple connection when you delete your account.</li>
+<li><strong>Profile and settings:</strong> the nickname, date of birth, gender, preferred character gender, interests and other introduction details you choose to submit; relationship and character settings; language and display preferences. These support eligibility checks and personalization.</li>
+<li><strong>Content:</strong> your messages, AI replies, memories, diaries, character descriptions, photo prompts and generated images. We store these to continue conversations and provide the requested features.</li>
+<li><strong>Purchases:</strong> Apple transaction identifiers, product and subscription status, allowances, spark balances, rewards and consumption records. These grant purchases, prevent duplicate credits and handle refunds. Apple handles payment details; Callove does not receive your card number.</li>
+<li><strong>Support and reports:</strong> report reasons, details and the reported message. Reports are stored on the account and a message excerpt of up to 500 characters is written to operational logs for investigation. If you email support, we receive your email address and message.</li>
+<li><strong>Diagnostics:</strong> request and job identifiers, response timings, generation outcomes, model usage/cost counters and error details, used to operate and troubleshoot the service. These may be associated with your account or account activity.</li>
+</ul>
+<p>Callove has no advertising or cross-app tracking SDK and does not collect IDFA or IDFV. We do not sell your data.</p>
+<h2>Product analytics and purchase observation</h2>
+<p>Analytics events are collected by app versions that include the analytics integration. Older app versions may send fewer events; verified server purchase observation also operates independently of the app SDK.</p>
+<p>The analytics-enabled app uses Amplitude to understand onboarding, feature use and purchase conversion. Events include a random installation identifier, the internal account UUID after sign-in, app/OS/device information, event times, selected app settings, plan, permission status, input presence and validation results, selection counts, product identifiers, local prices/currencies and categorized failure codes. Events do not include names, birth dates, gender values, interest text, messages, memories, diaries, photo URLs, credentials or raw error messages. Automatic screen/click/network collection and session replay are disabled. The app disables location collection and replaces the IP field in analytics events with 0.0.0.0; this does not mean that service providers receive no network connection information.</p>
+<p>RevenueCat observes verified Apple purchases, subscription renewals and refunds. It receives the internal account UUID, the random Amplitude installation identifier, verified transaction/receipt and notification information, product/subscription status and required SDK app/OS information. RevenueCat sends purchase lifecycle and revenue events to Amplitude under the same internal account identifier. Apple and the Callove server continue to determine purchase fulfillment. RevenueCat does not receive conversation or profile content.</p>
+<p>Production and development analytics are separated. Callove’s Amplitude projects use the US region. RevenueCat stores customer data in AWS data centers in the United States; its <a href="https://www.revenuecat.com/dpa">data processing agreement</a> covers authorized subprocessors. See the Korean policy for each recipient, purpose, transferred items and retention. These providers are used for service operation and analytics, not advertising or cross-app tracking.</p>
+<h2>AI processing</h2>
+<p>The sign-in screen displays an external-AI processing notice before Continue with Apple. Continuing accepts that notice; if you do not agree, do not continue. The app records this consent before generating conversation content. Text requests can include recent messages, relevant memories, nickname and character settings; background memory and diary processing also uses conversation content. Photo requests include the requested scene and fictional character references. Avoid putting information you do not want these services to process into your messages or prompts.</p>
+<ul>
+<li><strong>OpenRouter and the selected model provider (currently Google Gemini):</strong> generate replies, memories and diaries. Callove sets OpenRouter’s data_collection option to deny on chat, memory and diary requests, restricting routing to providers meeting that collection policy. Their service policies govern transient processing and retention exceptions. This is not a per-request zero-data-retention guarantee.</li>
+<li><strong>Replicate:</strong> generates images. Its API documentation states that prediction inputs, outputs and logs are removed after one hour by default. Callove copies completed images to its own storage so you can view them later. This provider default is separate from Callove's account data retention.</li>
+</ul>
+<p>These external services and our cloud infrastructure may process information outside Korea. Processing takes place in the United States and other countries where these providers operate facilities; see the Korean policy for each recipient, the transferred items and retention. Callove itself does not train AI models on your conversations or photos.</p>
+<p>Provider policies: <a href="https://openrouter.ai/privacy">OpenRouter</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://replicate.com/privacy">Replicate</a>. Replicate API retention: <a href="https://replicate.com/docs/topics/predictions/data-retention/">documentation</a>.</p>
+<h2>Cloud infrastructure and permissions</h2>
+<p>Cloudflare Workers and per-account SQLite Durable Objects host the API and account data. Cloudflare R2 stores generated images. Apple supplies sign-in and in-app purchases. The first release does not support Google sign-in or register an APNs push token. Any on-device notification scheduling is distinct from server push messaging.</p>
+<p>Callove requests add-only photo-library permission when you choose to save a generated image. It does not read your photo library or use your camera, microphone, contacts or location for AI conversation generation.</p>
+<h2>Operational notifications</h2>
+<p>Callove sends limited operational events to the operator’s Slack channel: a shortened Callove account identifier, deployment environment, age band, gender, built-in interest categories, character and relationship settings, product identifiers, event and error categories, counts and durations. This helps the operator investigate service and purchase outcomes. These events exclude names, exact birth dates, conversation and memory text, photo URLs, Apple identifiers and transaction identifiers. The shortened identifier is pseudonymous, not a guarantee of anonymity. These operational messages are scheduled for deletion 90 days after posting, separately from account deletion. Temporary failures are retried automatically.</p>
+<h2>Operator access</h2>
+<p>The operator can access stored information to operate the service and handle reports, support and disputes. The product policy also permits limited sample review for quality and safety. Diagnostic logs generally omit full conversation text, but reported excerpts and error details are exceptions.</p>
+<h2>Retention and deletion</h2>
+<ul>
+<li>Content is retained while your account exists. Deleting a message, memory, character or photo destroys its content immediately; only a deletion marker (identifier and time) remains so your other devices can sync the deletion. No 30-day recovery is offered.</li>
+<li>Deleting a generated photo queues deletion of its stored image. Failed cleanup is retried.</li>
+<li>Account deletion removes active account data and stored images and attempts to revoke the Apple sign-in credential. It does not wait for a 30-day grace period. Apple transaction records are retained to prevent duplicate credits and restore eligible purchases. These records are kept for as long as needed for those purposes and for refunds and disputes, and for any period required by law (for example, Korean e-commerce law requires payment records to be kept for five years and complaint records for three years).</li>
+<li>Account deletion also queues requests to delete the account’s Amplitude and RevenueCat data. Temporary delivery failures are retried. Amplitude describes a processing period of up to 30 days; accepting a request is different from completing deletion. Local unsent analytics are cleared, but in-flight requests may finish. Re-registering with the same Apple account while deletion is pending may cause newly received analytics to be included in that deletion. Retained purchase records on Callove’s server have the separate purpose described above.</li>
+<li>Operational logs have a separate provider retention period. Cloudflare currently documents three days for Workers Free logs. Reports in account storage and support email are separate from that log retention.</li>
+<li>Deleting Callove from your iPhone does not delete the server account or cancel subscriptions. Cancel subscriptions in iOS Settings &gt; Apple Account &gt; Subscriptions.</li>
+</ul>
+<h2>Your controls and contact</h2>
+<p>You can review and edit memories, delete content using the available app controls, export account data and request account deletion in Settings. For privacy or support requests, email <a href="mailto:haeundae96@gmail.com">haeundae96@gmail.com</a>. Please do not email passwords, payment details or unnecessary sensitive information.</p>
+<p>Callove is for users aged 19 or older. Do not use it if you do not meet that requirement.</p>
+<p><a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></p>
+</body></html>
