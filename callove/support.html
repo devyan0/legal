@@ -20,8 +20,9 @@
 </head>
 <body>
 <h1>Callove Support</h1>
-<p class="meta">Last updated: October 4, 2026</p>
-<p>Callove (컬러브) is an AI companion app for iPhone. You chat one-on-one with a
+<p class="meta">Last updated: October 14, 2026</p>
+<p>Callove (컬러브) is an AI companion app for iPhone, with an Android app coming to
+Google Play. You chat one-on-one with a
 fictional character who remembers what you tell them, writes a short diary about
 your day, and sends AI-generated photos. The character is an AI, not a real person,
 and every photo in the app is a synthetic image.</p>
@@ -32,6 +33,7 @@ and every photo in the app is a synthetic image.</p>
 <h2>What we can help with</h2>
 <ul>
   <li>Subscriptions, sparks, billing questions, and restoring purchases</li>
+  <li>Linking Apple or Google sign-in and moving to a new phone</li>
   <li>Chat, memory, diary, or photo issues</li>
   <li>Bugs, crashes, and unexpected app behavior</li>
   <li>Privacy questions, data export, and deletion requests</li>
@@ -41,25 +43,32 @@ and every photo in the app is a synthetic image.</p>
 <h2>Frequently asked questions</h2>
 
 <h3>How do I manage or cancel my Plus subscription?</h3>
-<p>Subscriptions are billed through your Apple ID. Open the iPhone Settings app,
-tap your name, then Subscriptions, and select Callove. You can change between
-monthly and yearly or cancel there. Cancelling stops the next renewal; Plus stays
+<p>Subscriptions are billed through the store you subscribed in. On iPhone, open the
+Settings app, tap your name, then Subscriptions, and select Callove. On Android, open
+the Google Play app, tap your profile icon, then Payments &amp; subscriptions ›
+Subscriptions, and select Callove. You can change between monthly and yearly or
+cancel there. Cancelling stops the next renewal; Plus stays
 active until the end of the current period. Callove also shows a shortcut to this
 screen in the "Me" tab.</p>
 
 <h3>I paid but Plus or my sparks are missing.</h3>
-<p>Open the "Me" tab and tap Restore Purchases. Make sure you are signed in to the
-same Apple ID you used to buy. If it still does not appear after a few minutes,
-email us with the receipt from Apple and the date of purchase.</p>
+<p>On iPhone, open the "Me" tab and tap Restore Purchases. Make sure you are signed in
+to the same Apple ID you used to buy. On Android, make sure Google Play on the device
+uses the Google account you bought with, then reopen Callove; the app checks your
+Google Play purchases again each time it opens. If it still does not appear after a
+few minutes, email us with the receipt from Apple or the Google Play order number
+(it starts with GPA.) and the date of purchase.</p>
 
 <h3>What are sparks?</h3>
 <p>Sparks are an in-app currency for extra advanced chat turns and photos beyond
-your free or Plus allowance. You buy them through Apple. The current daily check-in reward grants chat allowances rather than sparks. Sparks never expire. They have no cash value and cannot be transferred.
+your free or Plus allowance. You buy them through the App Store or Google Play. The current daily check-in reward grants chat allowances rather than sparks. Sparks never expire. They have no cash value and cannot be transferred.
 Your "Me" tab shows a ledger of every reward, purchase, and use.</p>
 
 <h3>Can I get a refund?</h3>
-<p>All purchases go through Apple, so refunds follow Apple's policy. Request one at
-<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Apple determines refund eligibility; mandatory consumer rights remain applicable. If a chat reply or
+<p>Purchases go through the store you bought from, so refunds follow that store's
+policy. For App Store purchases, request one at
+<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. For Google Play purchases, see
+<a href="https://support.google.com/googleplay/answer/2479637">Google Play's refund policy</a>. The store determines refund eligibility; mandatory consumer rights remain applicable. If a chat reply or
 photo fails on our side, the resource is refunded to your ledger automatically.</p>
 
 <h3>A photo failed or never arrived.</h3>
@@ -76,19 +85,36 @@ replies. A deletion marker containing the record ID and deletion time remains
 to synchronize the change across your devices. You can export your memories, diaries, and
 conversations as JSON or text from Settings.</p>
 
+<h3>How do I keep my account on a new phone, or move between iPhone and Android?</h3>
+<p>Link a sign-in method in Callove Settings: Apple or Google on iPhone, Google on
+Android. On the new device, choose to restore your account and sign in with the same
+Apple or Google account. Android offers Google sign-in only, so if your account is
+linked only to Apple, link Google on your iPhone first. One Callove account can be
+linked to both Apple and Google, and either one opens the same account. Linking never
+merges two Callove accounts. You can unlink a sign-in method while another one
+remains.</p>
+
 <h3>How do I delete my account?</h3>
 <p>Go to Settings and tap Delete Account, or use the <a href="delete-account.html">account deletion page</a> if you cannot open the app. Your profile, conversations, memories, diaries, and photos are deleted without
 a 30-day grace period. Purchase records are kept for as long as needed to prevent
 duplicate credits, restore eligible subscriptions, handle refunds or disputes,
 and meet applicable legal retention requirements. See our
 <a href="privacy.html">Privacy Policy</a> for the retention details. Deleting your account does not
-cancel an active subscription; cancel it in your Apple ID settings as described
-above.</p>
+cancel an active subscription; cancel it in your Apple ID settings or in Google
+Play as described above.</p>
 
 <h3>How do notifications work?</h3>
-<p>With notification permission, the current app can schedule an on-device reminder using available character content and your selected time. This is a local reminder, not a new server-generated message delivered while the app is closed. You can change the window or
+<p>With notification permission, the app can schedule an on-device reminder using available character content and your selected time. This is a local reminder, not a new server-generated message delivered while the app is closed. You can change the window or
 turn the message off there, or disable Callove notifications entirely in the
 iPhone Settings app under Notifications.</p>
+<p>App versions with push notifications, including the Android app, can also receive
+notifications from the Callove server through Firebase Cloud Messaging (on iPhone,
+delivered through Apple's push service): a new message from a character, with the
+character's name and a short preview; a diary that is ready; or a character
+starting a conversation. To stop them, turn notifications off in Callove Settings,
+in the iPhone Settings app under Notifications, or on Android in Settings › Apps ›
+Callove › Notifications. When you turn notifications off in Callove or sign out,
+the device's push token is removed from our server.</p>
 
 <h3>Is the character a real person?</h3>
 <p>No. Every character is an AI, and every photo is generated. During role-play the
@@ -101,8 +127,8 @@ and may remove content or restrict accounts. See the
 <a href="terms.html">Terms of Service</a> for what is and is not allowed.</p>
 
 <h2>Help us investigate</h2>
-<p>If you email us about a bug, please include your device model, iOS version,
-Callove app version, and a short description of what happened. A screenshot is
+<p>If you email us about a bug, please include your device model, iOS or Android
+version, Callove app version, and a short description of what happened. A screenshot is
 helpful when available. Please do not include passwords, payment details, or
 other sensitive information.</p>
 
