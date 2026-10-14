@@ -21,7 +21,7 @@
 </head>
 <body>
 <h1>Callove 개인정보 처리방침</h1>
-<p class="meta">시행일: 2026년 10월 4일 · 제공자 정보 갱신: 2026년 10월 5일 · 대화에 보낸 사진 항목 추가: 2026년 10월 9일 · 답장 듣기(음성) 추가: 2026년 10월 9일 · 로그인 없이 시작·시작 화면 AI 처리 동의 반영: 2026년 10월 13일 · Android 앱·Google 계정 연동·Google Play 결제·푸시 알림 항목 추가: 2026년 10월 14일(해당 기능 제공 시 적용) · <span class="lang"><a href="privacy-en.html">English</a></span></p>
+<p class="meta">시행일: 2026년 10월 4일 · 제공자 정보 갱신: 2026년 10월 5일 · 대화에 보낸 사진 항목 추가: 2026년 10월 9일 · 답장 듣기(음성) 추가: 2026년 10월 9일 · 로그인 없이 시작·시작 화면 AI 처리 동의 반영: 2026년 10월 13일 · Android 앱·Google 계정 연동·Google Play 결제·푸시 알림 항목 추가: 2026년 10월 14일(해당 기능 제공 시 적용) · <span class="lang"><a href="privacy-en.html">English</a></span> · iOS Meta 광고 측정 고지 추가: 2026-10-14(해당 SDK가 활성화된 앱 버전부터 적용)</p>
 
 <p>히은(대표 양승현, 이하 "운영자")은 AI 캐릭터 대화 앱 Callove(이하 "서비스")를 운영하며, 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 관련 고충을 신속하게 처리하기 위해 다음과 같이 개인정보 처리방침을 둡니다. 서비스의 캐릭터·답장·일기·사진은 AI가 만든 허구의 콘텐츠입니다. 이 방침은 같은 서비스를 제공하는 iOS 앱과 Android 앱에 함께 적용됩니다.</p>
 
@@ -39,7 +39,10 @@
 <h3>서비스 분석과 구매 추적</h3>
 <p>분석 기능이 포함된 앱은 Amplitude로 온보딩, 기능 사용, 구매 전환을 분석합니다. 설치별 임의 식별자, 로그인 후 Callove 이용자 ID, 앱 버전·빌드, OS·기기 정보, 발생 시각, 배포 환경, 플랜, 언어·알림 설정, 입력 여부·유효성, 선택 개수, 상품 ID·현지 가격·통화, 분류된 오류 코드를 보냅니다. 이름·생일·성별·관심사 원문·대화·기억·일기·사진 주소·인증 토큰·원본 오류 메시지는 분석 이벤트에 넣지 않습니다.</p>
 <p>iOS(App Store) 구매에 한해 RevenueCat은 Callove 이용자 ID, 임의 설치 식별자, Apple의 검증된 거래·영수증·서버 알림, 상품·구독 상태와 SDK의 앱·OS 정보를 받아 구매·갱신·환불을 추적합니다. 같은 이용자 ID로 구매 생애주기·매출 이벤트를 Amplitude에 전달합니다. 구매 지급은 계속 Apple 거래와 Callove 서버 검증을 기준으로 합니다. RevenueCat에 대화나 프로필 내용을 보내지 않습니다. Android(Google Play) 구매에는 RevenueCat을 쓰지 않으며, 구매 확인과 추적은 Callove 서버를 통해서만 합니다. 운영과 개발·테스트 빌드의 분석 프로젝트는 분리합니다.</p>
-<p>서비스에는 광고·교차 앱 추적 SDK가 없으며 광고 식별자(iOS IDFA, Android 광고 ID)를 수집하지 않습니다. Firebase는 푸시 알림 전송(Firebase Cloud Messaging)에만 쓰며 Firebase Analytics는 켜지 않습니다. 개인정보를 판매하지 않습니다.</p>
+<h3>iOS 광고 성과 측정(Meta)</h3>
+<p>Meta SDK가 활성화된 iOS 앱 버전은 Callove 광고의 설치·앱 실행·가입·구매 성과를 측정합니다. iOS 추적 권한(ATT)을 허용하면 광고 식별자(IDFA), Meta SDK의 설치 식별자, 앱·OS·기기 정보, 실행·가입 이벤트와 실제 구매 상품·금액·통화를 Meta에 전달합니다. 추적 권한 결정 전에는 SDK를 초기화하거나 이벤트를 보내지 않습니다. 거절하거나 권한이 제한되면 IDFA를 수집하지 않고 Meta의 제한된 데이터 이용 설정으로 앱 이용 정보를 전달합니다. 허용한 뒤 권한을 철회해도 이 제한된 측정은 남습니다. HTTPS 접속 과정에서 Meta가 IP 등 네트워크 정보를 수신할 수 있으며, SDK는 자체 충돌·진단 정보를 처리할 수 있습니다.</p>
+<p>이름·생일·성별·관심사·대화·기억·일기·사진·음성·연락처·Callove 계정 ID·Apple 또는 Google 계정 식별자는 Meta 이벤트에 넣지 않습니다. 앱 안에 광고를 표시하는 기능은 없습니다. 허용하지 않아도 모든 기능을 이용할 수 있고, iOS 설정 > 개인정보 보호 및 보안 > 추적에서 권한을 변경할 수 있습니다. 이미 Meta에 전달된 정보가 권한 철회나 Callove 계정 삭제만으로 즉시 삭제되는 것은 아닙니다. Meta에서 처리하는 정보에 관한 권리 행사와 보유 기준은 <a href="https://www.facebook.com/privacy/policy/">Meta 개인정보처리방침</a>을 따르며, 8절의 연락처로도 문의할 수 있습니다. Callove 계정 ID를 Meta에 보내지 않으므로 계정 ID 기반으로 Meta 이벤트를 찾아 삭제하는 연동은 제공하지 않습니다.</p>
+<p>Android 앱에는 Meta SDK가 없고 Android 광고 ID는 수집하지 않습니다. Amplitude·RevenueCat에는 IDFA·IDFV를 보내지 않습니다. Firebase는 푸시 알림 전송(Firebase Cloud Messaging)에만 쓰며 Firebase Analytics는 켜지 않습니다. 개인정보를 판매하지 않습니다.</p>
 
 <h2>2. 보유 및 이용 기간</h2>
 <ul>
@@ -69,6 +72,7 @@
 <tr><td>Replicate, Inc. (<a href="https://replicate.com/privacy">처리방침·연락처</a>)</td><td>미국</td><td>사진 요청 장면, 허구의 캐릭터 참고 이미지, 듣기를 누른 AI 답장 문장(음성 샘플은 고정 문장과 호칭)</td><td>사진 생성, 답장 음성 변환(생성된 음성은 서버에 저장하지 않고 기기에만 임시 보관)</td><td>기본 1시간 뒤 삭제(Replicate 정책)</td></tr>
 <tr><td>Amplitude, Inc. (<a href="https://amplitude.com/privacy">처리방침·연락처</a>)</td><td>미국(US 프로젝트)</td><td>위 서비스 분석 항목, RevenueCat 구매·매출 이벤트</td><td>온보딩·기능 사용·전환·재방문 분석</td><td>2절의 분석·구매 추적 기준</td></tr>
 <tr><td>RevenueCat, Inc. (<a href="https://www.revenuecat.com/privacy">처리방침·연락처</a>)</td><td>미국(AWS 데이터센터); 지원·하위 처리자는 <a href="https://www.revenuecat.com/dpa">처리 계약</a>에 따름</td><td>이용자·설치 식별자, 검증 거래·영수증·구독 상태, 앱·OS 정보</td><td>구매·갱신·환불 관측, Amplitude 연결</td><td>2절의 분석·구매 추적 기준</td></tr>
+<tr><td>Meta Platforms, Inc. 및 Meta 계열사 (<a href="https://www.facebook.com/privacy/policy/">처리방침·연락처</a>)</td><td>미국 및 Meta 데이터 처리 시설 소재 국가</td><td>iOS 광고 측정 기능에 관한 위 항목: 허용 시 IDFA, SDK 설치 식별자, 앱·OS·기기·네트워크 정보, 실행·가입·구매 이벤트, SDK 충돌·진단 정보</td><td>Callove 광고 성과 측정과 광고 개선. 거절·제한 시 IDFA 없이 제한된 데이터 이용</td><td>Meta 정책의 처리 목적·보유 기준에 따름. Callove 계정 삭제와 Meta의 처리·삭제는 별개</td></tr>
 <tr><td>Google LLC (<a href="https://policies.google.com/privacy">처리방침·연락처</a>)</td><td>미국</td><td>푸시 등록 토큰과 알림의 제목·본문(캐릭터 이름, 짧은 메시지 미리보기 등), Google Play 구매 토큰·주문 ID·상품 ID·구독 상태와 구매에 연결한 Callove 이용자 ID, Google 계정 연동 시 Google이 발급한 ID 토큰</td><td>Firebase Cloud Messaging으로 푸시 알림 발송(iOS는 Apple Push Notification service로 전달), Google Play Developer API로 Android 구매 확인·확정, Google Cloud Pub/Sub로 실시간 개발자 알림(갱신·해지·환불·권한 취소) 수신, Google 로그인 토큰 검증</td><td>위탁 목적 달성 시까지(Google 보관분은 Google 정책에 따름). Callove 서버의 푸시 토큰·구매 기록은 2절 기준</td></tr>
 <tr><td>Slack Technologies, LLC (<a href="https://slack.com/trust/privacy/privacy-policy">처리방침·연락처</a>)</td><td>미국</td><td>7절의 운영 알림 항목</td><td>서비스 운영 모니터링</td><td>90일</td></tr>
 </table></div>
