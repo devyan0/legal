@@ -24,6 +24,18 @@ KO/JA §13 and the corresponding new English §13 now announce changes and their
 
 Actual SDK collection, automatic native exception limitations, identifiers, international processing, retention and rights/deletion limitations remain disclosed. Publication does not itself enable an SDK. The parent owns TestFlight 1.0.4 (99) implementation/delivery and runtime verification; this policy task does not submit an App Store release or change other products.
 
+## Corrected publication readback
+
+Policy correction commit: `a1899e7b537cbc4467cba25c6d3c93f6e464eb4e`. Existing Pages source remains `main` at `/`; build `1349068973` is `built` for that exact commit, with no error (2026-11-07T13:33:46Z). Normally validating curl fetched each exact URL below without a query string; all three response bodies matched the committed files byte-for-byte.
+
+| Exact URL | SHA-256 | Bytes |
+| --- | --- | --- |
+| https://devyan0.github.io/legal/callove/privacy.html | 9f5dc5968c86cda01b7dc7f728ddea431ee0da41d687915cacc70fab5407575e | 38597 |
+| https://devyan0.github.io/legal/callove/privacy-en.html | d93fd958805455dfa705a2fae8a07a0a150e678590aa1ab2e028525b96c3bd2d | 32080 |
+| https://devyan0.github.io/legal/callove/privacy-ja.html | 4350f6ce803df094f14a2f97f7d5daa20e689987671150c84147f9e2027df830 | 45100 |
+
+Validation: all three HTML files parsed; local links and anchors resolved; December 7 wording and the old §13 notice promises absent; every substantive Crashlytics collection/retention/rights paragraph after its applicability paragraph is byte-identical to `48bc6fe0`. KO/EN/JA changed wording reviewed for aligned meaning; `git diff --check` passed. No app UI change or device-rendering claim. Only the three Callove policy files and this Callove record changed. The publication skill was separately corrected to distinguish policy/contract text review and owner-authorized amendments from statutory obligations, without universal notice/consent claims.
+
 ## Official evidence checked
 
 - https://firebase.google.com/support/privacy — inspected November 7, page updated November 5, 2026. Crashlytics installation UUID/FID/session UUID, plain-text exception class/message and native stacks are explicitly described. Crash stacks, extracted minidump data and associated identifiers: retained 90 days **before starting removal** from live and backup systems. Raw NDK minidumps are temporary during crash-session processing. Crashlytics is a global service, not US-only.
