@@ -1,6 +1,6 @@
 # Callove Crashlytics disclosure — 2026-11-07
 
-## Published and verified
+## Initial publication (historical; superseded below)
 
 Policy commit: `daecc99a11c3a2ef9eec788d1c79273225c0c118`.
 GitHub Pages existing `main`/root deployment: `built`, no build error.
@@ -16,11 +16,13 @@ Validation: HTMLParser parsed all three pages; local links and the unique `#cras
 
 Only Callove pages changed. No paid service, infrastructure, store submission, app release, build settings or SDK enable flag changed. Publishing these policies does not enable collection.
 
-## Notice period is an activation gate
+## Owner correction — effective November 7, 2026
 
-The existing KO/JA policy §13 promises seven days' advance notice, or 30 days for changes disadvantageous to users. Adding automatic native diagnostics and installation/session identifiers expands processing. This update conservatively preserves the 30-day notice period rather than silently treating publication as immediate permission. Notice: November 7; scheduled applicability: December 7, 2026 or later, only for enabled app versions. This is an operational application of the existing notice promise, not a legal opinion that every such change legally requires exactly 30 days.
+The owner explicitly authorized removal of the self-imposed seven-/30-day notice promise, December 7 deferral and separate tester-consent requirement. The initial deferral was an agent's conservative interpretation of existing policy text, not a finding of a statutory waiting period. This correction replaces that operational gate; it is not a hidden exception to unchanged policy text.
 
-A newly authorized TestFlight base build is not permission to bypass the notice period, the privacy gate, or native-payload review. Separate testing consent and an appropriate implementation would need to be established if earlier collection were intended; this task did not establish such a route. No promise is made that native exceptions cannot contain customer text. Production auto-collection should remain off until its prerequisites are resolved.
+KO/JA §13 and the corresponding new English §13 now announce changes and their effective date in the app or on the policy page, with procedures required by applicable law preserved. The public notice explicitly identifies the revised notice procedure and Crashlytics disclosure, effective November 7, 2026 for Crashlytics-enabled app versions. No additional consent UI or tester-consent flow is introduced. This owner-authorized policy decision is **not a universal legal assurance that consent or advance notice can never be required**, and does not waive applicable law.
+
+Actual SDK collection, automatic native exception limitations, identifiers, international processing, retention and rights/deletion limitations remain disclosed. Publication does not itself enable an SDK. The parent owns TestFlight 1.0.4 (99) implementation/delivery and runtime verification; this policy task does not submit an App Store release or change other products.
 
 ## Official evidence checked
 
@@ -53,9 +55,9 @@ Management entry: https://play.google.com/console/u/2/developers/652751108995274
 
 Browser redirected to Google account login. Current draft/submitted console answers remain unverified. Before Android activation, review/add Crash logs and reconcile Diagnostics, Device or other IDs, session metrics, purposes, required/optional status, sharing and deletion. No store metadata was changed; no review or release was submitted.
 
-## Remaining prerequisites
+## Separate follow-up checks (not a December 7 or extra-consent gate)
 
-1. Resolve notice/consent timing before enabling collection; publication alone does not satisfy this gate.
+1. The owner-resolved notice timing and extra tester-consent gate above is removed. No waiting period or additional consent UI should be inferred from this record; any specific statutory requirement needs its own grounded assessment.
 2. Read actual ASC/Play answers through an authenticated session and reconcile actual binary SDK manifests/payloads, including the missing public Play Crash logs category.
 3. Complete native exception/customer-content audit and practical installation-scoped rights/deletion handling; no universal raw-text scrubber or account-ID deletion integration exists.
 4. The parent owns the authorized new TestFlight build and runtime verification. App Store public release remains prohibited for this task.
