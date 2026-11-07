@@ -20,6 +20,7 @@
 </style>
 </head>
 <body>
+<p><b>2026년 11월 7일 변경 예고:</b> <a href="#crashlytics">Crashlytics 진단정보 처리 추가 · 2026년 12월 7일 이후 적용</a></p>
 <h1>Callove 개인정보 처리방침</h1>
 <p class="meta">환불 심사 정보 제공(Apple·RevenueCat) 명시: 2026년 10월 23일 · 운영 알림의 접속 국가·한마디 본문 및 보관 정책: 2026년 10월 20일 · 시행일: 2026년 10월 4일 · 제공자 정보 갱신: 2026년 10월 5일 · 대화에 보낸 사진 항목 추가: 2026년 10월 9일 · 답장 듣기(음성) 추가: 2026년 10월 9일 · 로그인 없이 시작·시작 화면 AI 처리 동의 반영: 2026년 10월 13일 · Android 앱·Google 계정 연동·Google Play 결제·푸시 알림 항목 추가: 2026년 10월 14일(해당 기능 제공 시 적용) · <span class="lang"><a href="privacy-en.html">English</a> · <a href="privacy-ja.html">日本語</a></span> · iOS Meta 광고 측정 고지 추가: 2026-10-14(해당 SDK가 활성화된 앱 버전부터 적용) · iOS Apple 광고 유입 확인 추가: 2026-10-17(해당 기능이 포함된 앱 버전부터 적용) · 오류 진단 기록 7일 보관 명시: 2026-10-17 · 직접 만든 캐릭터 공개 카드·체험 대화 항목 추가: 2026-10-18(해당 기능이 포함된 앱 버전부터 적용) · 분석 사용자 속성(성별·선호 캐릭터 성별·연령대) 고지: 2026-10-18(해당 속성이 포함된 앱 버전부터 적용) · 계정 삭제 후 90일 보관·운영자 열람 선택 고지: 2026-10-18(해당 선택 화면이 포함된 앱 버전부터 적용) · 사진 요청의 참고 사진·'나랑 함께' 본인 사진 항목 추가: 2026-10-19(해당 기능이 포함된 앱 버전부터 적용) · 가입 기기 식별·탈퇴 후 7일 재가입 제한 고지: 2026년 10월 27일</p>
 
@@ -49,7 +50,7 @@
 <p>이름·생일·성별·관심사·대화·기억·일기·사진·음성·연락처·Callove 계정 ID·Apple 또는 Google 계정 식별자는 Meta 이벤트에 넣지 않습니다. 앱 안에 광고를 표시하는 기능은 없습니다. 허용하지 않아도 모든 기능을 이용할 수 있고, iOS 설정 > 개인정보 보호 및 보안 > 추적에서 권한을 변경할 수 있습니다. 이미 Meta에 전달된 정보가 권한 철회나 Callove 계정 삭제만으로 즉시 삭제되는 것은 아닙니다. Meta에서 처리하는 정보에 관한 권리 행사와 보유 기준은 <a href="https://www.facebook.com/privacy/policy/">Meta 개인정보처리방침</a>을 따르며, 8절의 연락처로도 문의할 수 있습니다. Callove 계정 ID를 Meta에 보내지 않으므로 계정 ID 기반으로 Meta 이벤트를 찾아 삭제하는 연동은 제공하지 않습니다.</p>
 <h3>iOS Apple 광고 유입 확인(Apple Ads)</h3>
 <p>App Store에서 받은 iOS 앱은 설치 후 Apple의 AdServices 기능으로 이 설치가 Apple Ads 광고에서 왔는지 Apple에 확인하고, 결과가 확정되면 다시 요청하지 않습니다. 실패하면 제한된 횟수만 재시도합니다. 확인에 필요한 24시간 유효 AdServices 토큰은 Apple에만 보내며 저장하거나 Amplitude에 보내지 않습니다. Apple은 HTTPS 연결 과정에서 IP 등 네트워크 정보를 수신할 수 있습니다. 광고에서 온 경우 Apple이 알려 주는 Apple Ads 캠페인·광고 그룹·키워드·광고의 식별 번호, 광고 클릭 또는 노출 여부, 다운로드·재다운로드 구분, 국가·지역 코드, 광고가 보인 App Store 위치를 받습니다. 광고 귀속 결과는 Amplitude에서 Callove 이용자 ID와 연결해 광고 캠페인별 가입·이용·구매 전환을 분석하는 데만 씁니다. Apple이 제공하는 자체 귀속 기능이라 추적 권한(ATT)이나 광고 식별자(IDFA)를 쓰지 않고, 다른 회사의 데이터와 결합하거나 Amplitude 외의 제3자에게 제공하지 않습니다. 로그아웃해도 이 기기의 설치 출처로 남고, 계정 삭제 시 기기에서 지우며 Amplitude 삭제 요청 대상에 포함됩니다.</p>
-<p>Android 앱에는 Meta SDK가 없고 Android 광고 ID는 수집하지 않습니다. Amplitude·RevenueCat에는 IDFA·IDFV를 보내지 않습니다. Firebase는 푸시 알림 전송(Firebase Cloud Messaging)에만 쓰며 Firebase Analytics는 켜지 않습니다. 개인정보를 판매하지 않습니다.</p>
+<p>Android 앱에는 Meta SDK가 없고 Android 광고 ID는 수집하지 않습니다. Amplitude·RevenueCat에는 IDFA·IDFV를 보내지 않습니다. Firebase는 푸시 알림(Firebase Cloud Messaging)과 아래에 고지한 앱 오류 진단(Crashlytics)에 사용합니다. Firebase Analytics는 켜지 않습니다. 개인정보를 판매하지 않습니다.</p>
 
 <h2>2. 보유 및 이용 기간</h2>
 <ul>
@@ -78,13 +79,14 @@
 <p>서비스 제공을 위해 아래 업체에 처리를 맡기며, 이 업체들은 국외에서 개인정보를 처리합니다. 이는 서비스 제공·운영·개선을 위한 처리위탁·보관에 따른 국외 이전입니다. 정보는 서비스를 이용할 때마다 암호화된 네트워크(HTTPS)로 전송됩니다.</p>
 <div class="wrap"><table>
 <tr><th>이전받는 자 (연락처)</th><th>국가</th><th>이전 항목</th><th>목적</th><th>보유 기간</th></tr>
-<tr><td>Cloudflare, Inc. (<a href="https://www.cloudflare.com/privacypolicy/">처리방침·연락처</a>)</td><td>미국 및 Cloudflare 데이터센터 소재 국가</td><td>1절의 모든 항목</td><td>서버 운영, 계정·콘텐츠 저장, 사진 저장</td><td>2절과 같음</td></tr>
+<tr><td>Cloudflare, Inc. (<a href="https://www.cloudflare.com/privacypolicy/">처리방침·연락처</a>)</td><td>미국 및 Cloudflare 데이터센터 소재 국가</td><td>1절의 서버 처리 항목(Crashlytics로 직접 전송하는 진단 정보 제외)</td><td>서버 운영, 계정·콘텐츠 저장, 사진 저장</td><td>2절과 같음</td></tr>
 <tr><td>OpenRouter, Inc. (<a href="https://openrouter.ai/privacy">처리방침·연락처</a>) 및 선택된 모델 제공자(현재 OpenAI, <a href="https://openai.com/enterprise-privacy/">API 데이터 처리 안내</a>. 생성 이미지 검사는 Google Gemini)</td><td>미국 등 각 사업자의 처리 시설 소재 국가</td><td>최근 대화, 관련 기억, 호칭, 캐릭터 설정, 대화에 보낸 사진(그 메시지의 답장 생성 시에만), 사진 요청에 넣은 참고 사진·본인 사진(그 요청을 확인할 때만), 생성된 이미지</td><td>AI 답장·기억·일기 생성, 보낸 사진의 설명 작성과 안전 확인, 사진 요청의 참고 사진·본인 사진 안전 확인과 장면 설명 작성, 생성된 이미지가 보이기 전 형태 오류·노출 검사</td><td>요청 처리 후 각 사업자 정책에 따름. 데이터 수집을 허용하지 않는 제공자로만 요청을 보냄</td></tr>
 <tr><td>Replicate, Inc. (<a href="https://replicate.com/privacy">처리방침·연락처</a>)</td><td>미국</td><td>사진 요청 장면, 허구의 캐릭터 참고 이미지, 사람이 나오지 않은 장소 참고 사진, '나랑 함께'를 고른 옷 입은 일상 장면의 본인 사진, 듣기를 누른 AI 답장 문장(음성 샘플은 고정 문장과 호칭)</td><td>사진 생성, 답장 음성 변환(생성된 음성은 서버에 저장하지 않고 기기에만 임시 보관)</td><td>기본 1시간 뒤 삭제(Replicate 정책)</td></tr>
 <tr><td>Amplitude, Inc. (<a href="https://amplitude.com/privacy">처리방침·연락처</a>)</td><td>미국(US 프로젝트)</td><td>위 서비스 분석 항목, RevenueCat 구매·매출 이벤트, iOS Apple 광고 유입 확인 결과</td><td>온보딩·기능 사용·전환·재방문 분석, 자사 Apple 광고 성과 측정</td><td>2절의 분석·구매 추적 기준</td></tr>
 <tr><td>RevenueCat, Inc. (<a href="https://www.revenuecat.com/privacy">처리방침·연락처</a>)</td><td>미국(AWS 데이터센터); 지원·하위 처리자는 <a href="https://www.revenuecat.com/dpa">처리 계약</a>에 따름</td><td>이용자·설치 식별자, 검증 거래·영수증·구독 상태, 앱·OS 정보</td><td>구매·갱신·환불 관측, Amplitude 연결</td><td>2절의 분석·구매 추적 기준</td></tr>
 <tr><td>Meta Platforms, Inc. 및 Meta 계열사 (<a href="https://www.facebook.com/privacy/policy/">처리방침·연락처</a>)</td><td>미국 및 Meta 데이터 처리 시설 소재 국가</td><td>iOS 광고 측정 기능에 관한 위 항목: 허용 시 IDFA, SDK 설치 식별자, 앱·OS·기기·네트워크 정보, 실행·가입·구매 이벤트, SDK 충돌·진단 정보</td><td>Callove 광고 성과 측정과 광고 개선. 거절·제한 시 IDFA 없이 제한된 데이터 이용</td><td>Meta 정책의 처리 목적·보유 기준에 따름. Callove 계정 삭제와 Meta의 처리·삭제는 별개</td></tr>
 <tr><td>Google LLC (<a href="https://policies.google.com/privacy">처리방침·연락처</a>)</td><td>미국</td><td>푸시 등록 토큰과 알림의 제목·본문(캐릭터 이름, 짧은 메시지 미리보기 등), Google Play 구매 토큰·주문 ID·상품 ID·구독 상태와 구매에 연결한 Callove 이용자 ID, Google 계정 연동 시 Google이 발급한 ID 토큰</td><td>Firebase Cloud Messaging으로 푸시 알림 발송(iOS는 Apple Push Notification service로 전달), Google Play Developer API로 Android 구매 확인·확정, Google Cloud Pub/Sub로 실시간 개발자 알림(갱신·해지·환불·권한 취소) 수신, Google 로그인 토큰 검증</td><td>위탁 목적 달성 시까지(Google 보관분은 Google 정책에 따름). Callove 서버의 푸시 토큰·구매 기록은 2절 기준</td></tr>
+<tr><td>Google LLC — Firebase Crashlytics (<a href="https://firebase.google.com/support/privacy">정책·연락처</a>)</td><td>미국 및 Google·처리자 시설 소재 국가</td><td>설치·세션 식별자, native 충돌 스택·예외 진단정보, 앱·OS·기기·세션 정보, 코드 배포 식별자</td><td>충돌 진단·앱 안정성 측정. <a href="#crashlytics">적용 시점·전체 항목</a></td><td>충돌 기록·관련 식별자 90일 후 삭제 절차 시작. 자세한 보존·삭제 경계는 <a href="#crashlytics">별도 고지</a></td></tr>
 <tr><td>Slack Technologies, LLC (<a href="https://slack.com/trust/privacy/privacy-policy">처리방침·연락처</a>)</td><td>미국</td><td>7절의 운영 알림 항목</td><td>서비스 운영 모니터링·문의 확인</td><td>Slack 워크스페이스 보관 설정에 따름</td></tr>
 </table></div>
 <p>Apple은 Apple 계정 연동(선택)과 인앱 결제를 이용자와 Apple 사이에서 직접 처리하며, 운영자는 그 결과(식별자·거래 정보)만 받습니다. Google 계정 연동(선택)과 Google Play 결제도 이용자와 Google 사이에서 직접 이루어지며, 운영자는 Google 계정 고유 식별자와 1절의 구매 정보만 받습니다. iOS 푸시 알림은 Firebase Cloud Messaging을 거쳐 Apple Push Notification service(APNs)로 전달됩니다.</p>
@@ -142,5 +144,14 @@
 <p>이 방침을 바꾸면 시행 7일 전(이용자에게 불리한 변경은 30일 전) 앱 또는 이 페이지에서 알립니다.</p>
 
 <p class="meta"><a href="terms.html">이용약관</a> · <a href="support.html">지원</a></p>
+<section id="crashlytics">
+<h2>앱 오류 진단 — Firebase Crashlytics</h2>
+<p><b>변경 예고: 2026년 11월 7일 · 적용 예정: 2026년 12월 7일 이후 이 기능을 활성화한 앱 버전부터.</b> 기존 방침의 변경 예고 기간을 지키기 위한 사전 고지이며, 이 페이지의 게시가 기존 앱의 수집을 켜지는 않습니다.</p>
+<p>앱의 충돌과 오류를 찾고 안정성을 개선하기 위해 Google LLC의 Firebase Crashlytics를 사용합니다. SDK는 Crashlytics 설치 UUID, Firebase 설치 ID, 임의 세션 ID, 충돌 시각, 앱 식별자·버전·빌드, OS·기기 모델·CPU·메모리·저장소 정보, 앱의 실행 상태, native 스레드의 호출 스택·함수명, 예외 종류·메시지와 치명적 오류의 진단 문자열을 처리할 수 있습니다. Firebase Sessions는 세션별 안정성 측정을 위해 앱의 전경·배경 전환 시각과 앱·OS·SDK·네트워크 유형 정보를 처리합니다. Android NDK 충돌에는 minidump와 그로부터 추출한 정보가 포함될 수 있습니다.</p>
+<p>Callove는 계정 ID, 이름, 이메일, 대화·기억·일기·사진·문의 본문, 인증 토큰을 Crashlytics의 사용자 ID·사용자 정의 로그·속성으로 보내지 않습니다. 앱이 직접 보고하는 JavaScript 오류는 원문 메시지·이름·경로 대신 고정 오류 종류와 숫자 행·열 정보로 제한하며, 실행 중인 앱 코드 묶음의 배포 식별자 또는 내장 코드 표시를 진단 속성으로 보냅니다. 이 배포 식별자는 이용자 식별자가 아닙니다. 다만 native SDK의 자동 충돌 보고서 전체를 전송 전에 정제하는 것은 아니므로, 예외 메시지 등에 원문이나 고객 정보가 절대로 포함되지 않는다고 보장하지 않습니다. 이 진단 정보를 광고 추적이나 계정별 행동 분석에 쓰지 않으며 Google Analytics 연계 행동 기록은 켜지 않습니다.</p>
+<p><b>국외 이전·보관:</b> Google LLC가 장애 진단·안정성 측정을 위해 미국 및 Google이나 그 처리자의 시설이 있는 국가에서 처리합니다. 활성화된 앱에서 발생한 진단 정보는 HTTPS로 전송되며, 재실행 시 이전 보고서가 전송될 수 있습니다. Firebase 공식 정책상 충돌 스택, minidump에서 추출한 정보와 관련 식별자는 90일 보관 후 운영·백업 시스템에서 삭제하는 절차를 시작합니다. 이는 90일째 모든 사본의 삭제가 완료된다는 뜻이 아닙니다. 원본 NDK minidump는 충돌 세션 처리 동안만 일시 보관 후 폐기합니다. 다른 서비스 기록의 7일 보관 및 계정 콘텐츠의 90일 보관과는 별도입니다.</p>
+<p><b>삭제·처리정지:</b> Callove 계정 ID와 진단 설치 식별자를 연결하지 않으므로 계정 삭제나 로그아웃만으로 Google에 전송된 진단 기록을 찾아 즉시 지우는 연동은 없습니다. 열람·삭제·처리정지는 <a href="mailto:haeundae96@gmail.com">haeundae96@gmail.com</a>으로 요청할 수 있습니다. 설치 정보로 대상을 확인할 수 있는지와 Firebase가 지원하는 삭제 범위를 검토해 처리 방법·제한을 안내하며, 계정 삭제와 함께 제공자 삭제가 끝났다고 간주하지 않습니다. 현재 앱에는 별도의 Crashlytics 끄기 스위치가 없습니다. 자동 전송을 끈 빌드라도 보고서를 기기에 저장할 수 있고 나중에 활성화하면 전송될 수 있습니다. 진단 처리에 동의하지 않으면 활성화된 앱 버전의 사용을 중단하고 문의해 주세요. 앱을 삭제해도 이미 전송된 기록은 지워지지 않으며 서버 계정 삭제·구독 해지도 별도입니다.</p>
+<p>제공자 정책·연락처: <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호 및 보존 안내</a> · <a href="https://firebase.google.com/support/privacy#data_processing_information">처리 정보</a>.</p>
+</section>
 </body>
 </html>

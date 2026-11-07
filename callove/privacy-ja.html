@@ -20,6 +20,7 @@
 </style>
 </head>
 <body>
+<p><b>2026年11月7日 変更予告：</b><a href="#crashlytics">Crashlytics診断情報の処理追加・2026年12月7日以降適用</a></p>
 <h1>Callove プライバシーポリシー</h1>
 <p class="meta">返金審査情報の提供（Apple・RevenueCat）の明記：2026年10月23日 · 運営通知の接続元国・ご意見本文および保存方針：2026年10月20日 · 施行日：2026年10月4日 · 提供事業者情報の更新：2026年10月5日 · 会話で送信した写真の項目追加：2026年10月9日 · 返答の音声再生の追加：2026年10月9日 · ログインせずに開始する機能・開始画面でのAI処理への同意を反映：2026年10月13日 · Androidアプリ・Googleアカウント連携・Google Play決済・プッシュ通知の項目追加：2026年10月14日（各機能の提供時から適用） · <span class="lang"><a href="privacy-en.html">English</a></span> · iOSのMeta広告測定に関する告知の追加：2026年10月14日（当該SDKが有効なアプリバージョンから適用） · iOSのApple広告経由の流入確認の追加：2026年10月17日（当該機能を含むアプリバージョンから適用） · エラー診断記録の7日間保管を明記：2026年10月17日 · 自分で作ったキャラクターの公開カード・お試し会話の項目追加：2026年10月18日（当該機能を含むアプリバージョンから適用） · 分析のユーザー属性（性別・希望するキャラクターの性別・年齢層）の告知：2026年10月18日（当該属性を送信するアプリバージョンから適用） · アカウント削除後90日間の保管と運営者による閲覧（削除画面での選択）の告知：2026年10月18日（当該選択画面を含むアプリバージョンから適用） · 写真リクエストの参考写真・「ふたりで」用の自分の写真の項目追加：2026年10月19日（当該機能を含むアプリバージョンから適用） · 登録用の端末識別・退会後7日間の再登録制限の告知：2026年10月27日</p>
 
@@ -49,7 +50,7 @@
 <p>名前、生年月日、性別、興味・関心、会話、記憶、日記、写真、音声、連絡先、CalloveアカウントID、AppleまたはGoogleアカウントの識別子はMetaイベントに含めません。アプリ内に広告を表示する機能はありません。許可しなくてもすべての機能を利用でき、iOSの「設定 &gt; プライバシーとセキュリティ &gt; トラッキング」で許可を変更できます。Metaへすでに送信された情報は、許可の撤回やCalloveアカウントの削除だけで直ちに削除されるわけではありません。Metaが処理する情報についての権利行使と保管基準は<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>に従います。第8節の連絡先にもお問い合わせできます。CalloveアカウントIDはMetaに送信しないため、アカウントIDを使ってMetaイベントを検索・削除する連携機能は提供していません。</p>
 <h3>iOSのApple広告経由の流入確認（Apple Ads）</h3>
 <p>App Storeから入手したiOSアプリは、インストール後にAppleのAdServicesを使って、そのインストールがApple Ads広告経由かどうかをAppleに確認します。結果が確定した後は再度リクエストしません。失敗した場合も再試行は限られた回数だけ行います。確認に必要な有効期間24時間のAdServicesトークンはAppleにのみ送信し、保存もAmplitudeへの送信も行いません。AppleはHTTPS接続の過程でIPアドレスなどのネットワーク情報を受け取る場合があります。広告経由の場合、AppleからApple Adsのキャンペーン・広告グループ・キーワード・広告の識別番号、広告のクリックまたは表示の別、新規ダウンロード・再ダウンロードの別、国・地域コード、広告が表示されたApp Store内の場所を受け取ります。広告のアトリビューション結果はAmplitudeでCallove利用者IDに関連付け、広告キャンペーン別の登録・利用・購入への転換分析にのみ使用します。Apple自身が提供するアトリビューション機能のため、トラッキング許可（ATT）や広告識別子（IDFA）は使用せず、他社のデータと結合したり、Amplitude以外の第三者に提供したりすることはありません。ログアウト後もこの端末のインストール元として残り、アカウントを削除すると端末から消去し、Amplitudeへの削除依頼の対象にも含めます。</p>
-<p>AndroidアプリにはMeta SDKがなく、Androidの広告IDは収集しません。Amplitude・RevenueCatにはIDFA・IDFVを送信しません。Firebaseはプッシュ通知の配信（Firebase Cloud Messaging）にのみ使用し、Firebase Analyticsは有効にしません。個人情報を販売することはありません。</p>
+<p>AndroidアプリにはMeta SDKがなく、Androidの広告IDは収集しません。Amplitude・RevenueCatにはIDFA・IDFVを送信しません。Firebaseはプッシュ通知（Firebase Cloud Messaging）と、以下に記載するアプリの障害診断（Crashlytics）に使用します。Firebase Analyticsは有効にしません。個人情報を販売することはありません。</p>
 
 <h2>2. 保管・利用期間</h2>
 <ul>
@@ -78,13 +79,14 @@
 <p>サービス提供のため、以下の事業者に処理を委託し、各事業者は国外で個人情報を処理します。これはサービスの提供・運営・改善を目的とする処理の委託・保管に伴う国外移転です。情報はサービスを利用するたびに、暗号化されたネットワーク（HTTPS）で送信されます。</p>
 <div class="wrap"><table>
 <tr><th>移転先（連絡先）</th><th>国</th><th>移転する情報</th><th>目的</th><th>保管期間</th></tr>
-<tr><td>Cloudflare, Inc.（<a href="https://www.cloudflare.com/privacypolicy/">ポリシー・連絡先</a>）</td><td>米国およびCloudflareのデータセンター所在国</td><td>第1節のすべての項目</td><td>サーバー運営、アカウント・コンテンツの保存、写真の保存</td><td>第2節と同じ</td></tr>
+<tr><td>Cloudflare, Inc.（<a href="https://www.cloudflare.com/privacypolicy/">ポリシー・連絡先</a>）</td><td>米国およびCloudflareのデータセンター所在国</td><td>第1節のサーバー処理項目（Crashlyticsへ直接送る診断情報を除く）</td><td>サーバー運営、アカウント・コンテンツの保存、写真の保存</td><td>第2節と同じ</td></tr>
 <tr><td>OpenRouter, Inc.（<a href="https://openrouter.ai/privacy">ポリシー・連絡先</a>）および選択されたモデル提供事業者（現在はOpenAI、<a href="https://openai.com/enterprise-privacy/">APIデータの取扱い</a>。生成画像の検査にはGoogle Geminiを使用）</td><td>米国など各事業者の処理施設所在国</td><td>直近の会話、関連する記憶、呼び名、キャラクター設定、会話で送信した写真（そのメッセージへの返答を生成するときのみ）、写真リクエストに添えた参考写真・自分の写真（そのリクエストを確認するときのみ）、生成された画像</td><td>AIの返答・記憶・日記の生成、送信写真の説明作成と安全確認、写真リクエストの参考写真・自分の写真の安全確認と場面説明の作成、生成画像を表示する前の形状不良・露出の検査</td><td>リクエスト処理後は各事業者のポリシーに従います。データ収集を許可しない提供事業者にのみリクエストを送信します。</td></tr>
 <tr><td>Replicate, Inc.（<a href="https://replicate.com/privacy">ポリシー・連絡先</a>）</td><td>米国</td><td>写真リクエストの場面、架空のキャラクターの参考画像、人物が写っていない場所の参考写真、「ふたりで」を選んだ服を着た日常の場面での自分の写真、音声再生を選んだAIの返答文（音声サンプルでは固定文と呼び名）</td><td>写真の生成、返答の音声変換（生成音声はサーバーに保存せず、端末にのみ一時保管）</td><td>原則1時間後に削除（Replicateのポリシー）</td></tr>
 <tr><td>Amplitude, Inc.（<a href="https://amplitude.com/privacy">ポリシー・連絡先</a>）</td><td>米国（USプロジェクト）</td><td>上記のサービス分析項目、RevenueCatの購入・売上イベント、iOSのApple広告経由の流入確認結果</td><td>オンボーディング・機能利用・転換・再訪問の分析、自社Apple広告の効果測定</td><td>第2節の分析・購入追跡の基準</td></tr>
 <tr><td>RevenueCat, Inc.（<a href="https://www.revenuecat.com/privacy">ポリシー・連絡先</a>）</td><td>米国（AWSデータセンター）。サポート・再委託先については<a href="https://www.revenuecat.com/dpa">データ処理契約</a>に従います。</td><td>利用者・インストール識別子、検証済み取引・レシート・サブスクリプション状態、アプリ・OS情報</td><td>購入・更新・返金の観測、Amplitudeとの連携</td><td>第2節の分析・購入追跡の基準</td></tr>
 <tr><td>Meta Platforms, Inc.およびMetaの関連会社（<a href="https://www.facebook.com/privacy/policy/">ポリシー・連絡先</a>）</td><td>米国およびMetaのデータ処理施設所在国</td><td>上記のiOS広告測定機能に関する項目：許可時のIDFA、SDKのインストール識別子、アプリ・OS・端末・ネットワーク情報、起動・登録・購入イベント、SDKのクラッシュ・診断情報</td><td>Callove広告の効果測定と広告の改善。拒否・制限時はIDFAを使わず、制限されたデータ利用を行います。</td><td>Metaポリシーの処理目的・保管基準に従います。Calloveアカウントの削除とMetaでの処理・削除は別のものです。</td></tr>
 <tr><td>Google LLC（<a href="https://policies.google.com/privacy">ポリシー・連絡先</a>）</td><td>米国</td><td>プッシュ登録トークンと通知のタイトル・本文（キャラクター名、短いメッセージのプレビューなど）、Google Play購入トークン・注文ID・商品ID・サブスクリプション状態と購入に関連付けたCallove利用者ID、Googleアカウント連携時にGoogleが発行したIDトークン</td><td>Firebase Cloud Messagingによるプッシュ通知配信（iOSにはApple Push Notification serviceを経由して配信）、Google Play Developer APIによるAndroid購入の確認・確定、Google Cloud Pub/Subによるリアルタイム開発者通知（更新・解約・返金・利用権の取り消し）の受信、Googleログイントークンの検証</td><td>委託目的の達成まで（Googleの保管分はGoogleのポリシーに従います）。Calloveサーバーのプッシュトークン・購入記録は第2節の基準に従います。</td></tr>
+<tr><td>Google LLC — Firebase Crashlytics（<a href="https://firebase.google.com/support/privacy">方針・連絡先</a>）</td><td>米国およびGoogle・処理委託先の施設所在国</td><td>インストール・セッション識別子、ネイティブのクラッシュスタック・例外診断情報、アプリ・OS・端末・セッション情報、コードの配信識別子</td><td>障害診断・安定性測定。<a href="#crashlytics">適用時期・全項目</a></td><td>クラッシュ記録・関連識別子は90日後に削除手続きを開始。<a href="#crashlytics">保存・削除の詳細</a></td></tr>
 <tr><td>Slack Technologies, LLC（<a href="https://slack.com/trust/privacy/privacy-policy">ポリシー・連絡先</a>）</td><td>米国</td><td>第7節の運営通知項目</td><td>サービス運営の監視・お問い合わせの確認</td><td>Slackワークスペースの保存設定に従う</td></tr>
 </table></div>
 <p>Appleは、Appleアカウント連携（任意）とアプリ内決済を利用者とAppleの間で直接処理し、運営者は結果（識別子・取引情報）のみを受け取ります。Googleアカウント連携（任意）とGoogle Play決済も利用者とGoogleの間で直接行われ、運営者はGoogleアカウント固有の識別子と第1節の購入情報のみを受け取ります。iOSのプッシュ通知は、Firebase Cloud Messagingを経由してApple Push Notification service（APNs）へ送られます。</p>
@@ -142,5 +144,14 @@
 <p>本ポリシーを変更する場合は、施行の7日前（利用者に不利益となる変更は30日前）までに、アプリまたはこのページでお知らせします。</p>
 
 <p class="meta"><a href="terms-ja.html">利用規約</a> · <a href="support-ja.html">サポート</a></p>
+<section id="crashlytics">
+<h2>アプリの障害診断 — Firebase Crashlytics</h2>
+<p><b>変更の予告：2026年11月7日。適用予定：2026年12月7日以降、本機能を有効にしたアプリバージョンから。</b>従来のポリシーの予告期間を守るための事前告知です。このページの公開だけで既存アプリの収集が有効になることはありません。</p>
+<p>クラッシュやエラーを調べ、アプリの安定性を改善するため、Google LLCのFirebase Crashlyticsを使用します。SDKは、CrashlyticsのインストールUUID、FirebaseインストールID、ランダムなセッションID、発生日時、アプリの識別子・バージョン・ビルド、OS・端末モデル・CPU・メモリ・ストレージ情報、アプリの実行状態、ネイティブスレッドのスタックトレース・関数名、例外の種類・メッセージ、致命的エラーの診断文字列を処理する場合があります。Firebase Sessionsはセッション別の安定性測定のため、アプリの前面・背面への切り替え時刻と、アプリ・OS・SDK・ネットワーク種別の情報を処理します。Android NDKのクラッシュにはminidumpとそこから抽出した情報が含まれる場合があります。</p>
+<p>Calloveは、アカウントID、名前、メールアドレス、会話・記憶・日記・写真・お問い合わせの内容、認証トークンを、CrashlyticsのユーザーID・カスタムログ・カスタム属性として送信しません。アプリが直接報告するJavaScriptエラーは、元のメッセージ・名前・パスではなく、固定のエラー種別と数値の行・列情報に限定します。実行中のアプリコードの配信識別子、または内蔵コードであることを診断属性として送ります。この配信識別子は利用者の識別子ではありません。ただし、ネイティブSDKの自動クラッシュレポート全体を送信前に除去・加工するわけではなく、例外メッセージなどに原文やお客様の情報が絶対に含まれないとは保証できません。この診断情報を広告追跡やアカウント別の行動分析に使わず、Google Analyticsと連携した行動履歴の収集も有効にしません。</p>
+<p><b>国外移転・保存：</b>Google LLCが障害診断と安定性測定のため、米国およびGoogleやその処理委託先の施設がある国で処理します。有効なアプリで生じた診断情報はHTTPSで送信し、再起動時に以前のレポートを送る場合があります。Firebaseの公式方針では、クラッシュのスタックトレース、minidumpから抽出した情報、関連する識別子を90日間保存した後、稼働中・バックアップのシステムから削除する手続きを開始します。90日目にすべてのコピーの削除が完了するという意味ではありません。元のNDK minidumpはクラッシュセッションの処理中のみ一時保存し、その後破棄します。他のサービス記録の7日間保存や、アカウントのコンテンツの90日間保存とは別です。</p>
+<p><b>削除・処理の停止：</b>CalloveのアカウントIDと診断用インストール識別子を紐づけないため、アカウント削除やログアウトだけで、Googleへ送信済みの診断記録を検索して直ちに削除する連携機能はありません。閲覧・削除・処理停止のご依頼は<a href="mailto:haeundae96@gmail.com">haeundae96@gmail.com</a>へお送りください。インストール情報で対象を特定できるか、Firebaseがどこまで削除に対応するかを確認し、方法と制限をご案内します。アカウント削除をもって提供事業者での削除も完了したとは扱いません。現在、アプリにはCrashlytics専用のオフスイッチはありません。自動送信を無効にしたビルドでも端末にレポートを保存し、後で有効にした際に送信する場合があります。この処理を望まない場合は、有効なアプリバージョンの利用を中止し、お問い合わせください。アンインストールしても送信済みの記録は削除されず、サーバーのアカウント削除や定期購入の解約も別途必要です。</p>
+<p>提供事業者の方針・連絡先：<a href="https://firebase.google.com/support/privacy">Firebaseのプライバシーと保存期間</a> · <a href="https://firebase.google.com/support/privacy#data_processing_information">データ処理情報</a>。</p>
+</section>
 </body>
 </html>
